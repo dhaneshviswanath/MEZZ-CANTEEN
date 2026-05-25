@@ -1,0 +1,6 @@
+{
+  "name": "MEZZ CANTEEN",
+  "description": "MEZZ CANTEEN - Tracks employee meal attendance, manages expenses, monitors budget wellness, and generates analytics reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

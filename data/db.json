@@ -1,0 +1,35 @@
+{
+  "employees": [],
+  "attendance": [],
+  "expenses": [],
+  "budgetEntries": [
+    {
+      "id": "bud_1",
+      "date": "2026-05-01",
+      "amount": 25000,
+      "description": "Initial May Budget Allocation"
+    }
+  ],
+  "operationalLog": [],
+  "departments": [
+    "MTW",
+    "Store",
+    "BVEN Office",
+    "BVEN Lab",
+    "CLDJ",
+    "Japan Base",
+    "French Base",
+    "Nagad",
+    "BVEN Workshop"
+  ],
+  "vendors": [
+    "Algamil",
+    "L'Hyper",
+    "Coubeche",
+    "Cash Center",
+    "Fratacci",
+    "Casino",
+    "Naugaprix",
+    "Riyad"
+  ]
+}

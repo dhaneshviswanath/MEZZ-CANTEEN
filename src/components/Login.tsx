@@ -129,8 +129,8 @@ export default function Login({ onLoginSuccess }: LoginProps) {
               <span className="font-semibold text-slate-700">Login Tip:</span>
               <span>Use prefilled credentials to sign in instantly (or custom ones if database changed):</span>
               <span>
-                Username: <code className="bg-slate-200 px-1 rounded">your username</code> | Password:{" "}
-                <code className="bg-slate-200 px-1 rounded">your password</code>
+                Username: <code className="bg-slate-200 px-1 rounded">admin</code> | Password:{" "}
+                <code className="bg-slate-200 px-1 rounded">admin123</code>
               </span>
             </div>
 

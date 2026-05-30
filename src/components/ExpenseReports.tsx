@@ -16,9 +16,24 @@ import {
 } from "lucide-react";
 import { Expense } from "../types";
 
+const getTodayStr = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
+const getFirstOfMonthStr = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  return `${year}-${month}-01`;
+};
+
 export default function ExpenseReports({ onNavigate }: { onNavigate?: (tab: string) => void }) {
-  const [startDate, setStartDate] = useState("2026-05-01");
-  const [endDate, setEndDate] = useState("2026-05-25");
+  const [startDate, setStartDate] = useState(() => getFirstOfMonthStr());
+  const [endDate, setEndDate] = useState(() => getTodayStr());
   const [vendorFilter, setVendorFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [searchItem, setSearchItem] = useState("");

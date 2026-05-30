@@ -24,11 +24,16 @@ interface AttendanceItem {
   hasRecord: boolean;
 }
 
+const getTodayStr = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
 export default function AttendanceTracking() {
-  const [targetDate, setTargetDate] = useState(() => {
-    // Current local system time is 2026-05-25: let's default to exactly that!
-    return "2026-05-25";
-  });
+  const [targetDate, setTargetDate] = useState(() => getTodayStr());
 
   const [attendance, setAttendance] = useState<AttendanceItem[]>([]);
   const [loading, setLoading] = useState(false);
@@ -47,7 +52,7 @@ export default function AttendanceTracking() {
   // Filter department in view
   const [deptFilter, setDeptFilter] = useState("all");
 
-  const todayStr = "2026-05-25"; // Constant tracking 2026 baseline
+  const todayStr = getTodayStr(); // Constant tracking current local system time
 
   const fetchDepartments = async () => {
     try {

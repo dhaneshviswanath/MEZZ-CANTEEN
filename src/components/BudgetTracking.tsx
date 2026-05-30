@@ -12,6 +12,14 @@ import {
 } from "lucide-react";
 import { BudgetEntry } from "../types";
 
+const getTodayStr = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
 export default function BudgetTracking() {
   const [entries, setEntries] = useState<BudgetEntry[]>([]);
   const [stats, setStats] = useState<{
@@ -27,7 +35,7 @@ export default function BudgetTracking() {
 
   // Form State
   const [amount, setAmount] = useState("");
-  const [budgetDate, setBudgetDate] = useState("2026-05-25"); // system current local date
+  const [budgetDate, setBudgetDate] = useState(() => getTodayStr()); // system current local date
   const [description, setDescription] = useState("");
 
   const [editingEntryId, setEditingEntryId] = useState<string | null>(null);

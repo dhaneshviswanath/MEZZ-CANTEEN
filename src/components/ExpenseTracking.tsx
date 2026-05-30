@@ -15,10 +15,18 @@ import {
 } from "lucide-react";
 import { ExpenseItem, Expense } from "../types";
 
+const getTodayStr = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
 export default function ExpenseTracking({ onNavigate }: { onNavigate?: (tab: string) => void }) {
   const [editingExpenseId, setEditingExpenseId] = useState<string | null>(null);
   const [billNumber, setBillNumber] = useState("");
-  const [expenseDate, setExpenseDate] = useState("2026-05-25"); // system current local date
+  const [expenseDate, setExpenseDate] = useState(() => getTodayStr()); // system current local date
   const [searchQuery, setSearchQuery] = useState("");
 
   // Line items state

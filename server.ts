@@ -17,7 +17,7 @@ function readDB() {
         expenses: [], 
         budgetEntries: [], 
         operationalLog: [],
-        departments: ["MTW", "Store", "BVEN Office", "BVEN Lab", "CLDJ", "Japan Base", "French Base", "Nagad"],
+        departments: ["Asian", "Europian"],
         vendors: ["Algamil", "L'Hyper", "Coubeche", "Cash Center", "Fratacci", "Casino", "Naugaprix", "Riyad"]
       };
     }
@@ -31,7 +31,7 @@ function readDB() {
     if (!json.budgetEntries) json.budgetEntries = [];
     if (!json.operationalLog) json.operationalLog = [];
     if (!json.departments || !Array.isArray(json.departments)) {
-      json.departments = ["MTW", "Store", "BVEN Office", "BVEN Lab", "CLDJ", "Japan Base", "French Base", "Nagad"];
+      json.departments = ["Asian", "Europian"];
     }
     if (!json.vendors || !Array.isArray(json.vendors)) {
       json.vendors = ["Algamil", "L'Hyper", "Coubeche", "Cash Center", "Fratacci", "Casino", "Naugaprix", "Riyad"];
@@ -45,7 +45,7 @@ function readDB() {
       expenses: [], 
       budgetEntries: [], 
       operationalLog: [],
-      departments: ["MTW", "Store", "BVEN Office", "BVEN Lab", "CLDJ", "Japan Base", "French Base", "Nagad"],
+      departments: ["Asian", "Europian"],
       vendors: ["Algamil", "L'Hyper", "Coubeche", "Cash Center", "Fratacci", "Casino", "Naugaprix", "Riyad"]
     };
   }
